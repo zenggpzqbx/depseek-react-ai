@@ -4,4 +4,4 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## 智能问答
 * 普通问答功能
 * 可以查询天气
-* 回答内容显示的markdown文档中，并着色
+* 回答内容渲染到markdown文档中，并着色
