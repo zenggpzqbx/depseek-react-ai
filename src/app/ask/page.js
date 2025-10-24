@@ -25,8 +25,12 @@ function Ask() {
     }, [chatMessage])
     const chatBox = useRef(null)
 
+    function handleChangeEvent(e) {
+        setTextArea(e.target.value.replace(/\n/g, ''))
+    }
+
     function handleEnterEvent(e) {
-        const value = e.target.value.replace(/\s/g, '')
+        const value = e.target.value.replace(/\n/g, '').trim()
         const length = value.length;
         if (length) {
             setChatMessage((draft) => {
@@ -89,6 +93,7 @@ function Ask() {
                             })
                         }
                         if (tool_calls) {
+                            console.log(tool_calls, '=====tool-')
                             tool_calls.forEach((c) => {
                                 const hasCall = currentRequestTool.find(item => item.index === c.index);
                                 if (hasCall) {
@@ -157,13 +162,14 @@ function Ask() {
                     return (
                         <div key={index}
                              className={`${ask.messageDefault} ${item.role === 'user' ? ask.messageClient : ask.messageServer}`}>
-                            {item.role === 'user' ?item.content:  (<HighlightMarkdown content={item.content}></HighlightMarkdown>)}
+                            {item.role === 'user' ? item.content : (
+                                <HighlightMarkdown content={item.content}></HighlightMarkdown>)}
                         </div>)
                 })}
             </div>
             <div className={ask.chatMessage}>
                 <TextArea placeholder="请输入你的问题" value={textArea} rows={5}
-                          onChange={e => setTextArea(e.target.value.replace(/\s/g, ''))}
+                          onChange={handleChangeEvent}
                           onPressEnter={handleEnterEvent}></TextArea>
             </div>
         </div>
