@@ -8,17 +8,6 @@ function CodeBlock({node, inline, className, children, ...props}) {
     console.log(node, inline, className, children, props, '-----------')
     const match = /language-(\w+)/.exec(className || '')
     const language = match ? match[1] : 'text'
-    // const codeContent = String(children).replace(/\n$/, '')
-    // const codeBlockRef = useRef(null)
-    // useEffect(() => {
-    //     if (codeBlockRef.current && !inline && language) {
-    //         try {
-    //             hljs.highlightElement(codeBlockRef.current)
-    //         } catch (error) {
-    //             console.warn('Highlight.js error:', error)
-    //         }
-    //     }
-    // }, [inline, language, codeContent])
     console.log(children, 'children')
     if (inline) {
         return (
