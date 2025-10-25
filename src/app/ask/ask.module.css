@@ -18,27 +18,28 @@
     align-items: center;
 }
 
-
 .messageDefault {
     min-width: 0;
     max-width: calc(100% - 300px);
     width: fit-content;
     word-wrap: break-word;
     word-break: normal;
-    border-radius: 10px;
-    padding: 10px;
 }
 
 .messageClient {
     background-color: blanchedalmond;
     text-align: right;
     align-self: end;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .messageServer {
     background-color: aliceblue;
     text-align: left;
     margin: 20px 0;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .w100 {
@@ -55,6 +56,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    background-color: #f9fafb;
+    border-right: 1px solid rgba(0,0,0,.04);
 }
 
 .rightContainer {
@@ -76,12 +79,7 @@
     width: calc(100% - 80px);
 }
 
-.roleUser {
-    position: relative;
-}
-
 .userTools {
-    position: absolute;
-    left: 0;
-    top: -20px;
+    display: flex;
+    flex-direction: row;
 }
