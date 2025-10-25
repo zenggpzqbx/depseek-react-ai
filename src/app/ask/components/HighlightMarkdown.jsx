@@ -1,14 +1,14 @@
 import Markdown from 'react-markdown'
-import {useEffect, useMemo, useRef} from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {docco} from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import ask from "@/app/ask/ask.module.css";
 
 
 function CodeBlock({node, inline, className, children, ...props}) {
-    console.log(node, inline, className, children, props, '-----------')
+    // console.log(node, inline, className, children, props, '-----------')
     const match = /language-(\w+)/.exec(className || '')
     const language = match ? match[1] : 'text'
-    console.log(children, 'children')
+    // console.log(children, 'children')
     if (inline) {
         return (
             <code
@@ -36,8 +36,11 @@ function CodeBlock({node, inline, className, children, ...props}) {
 
 export default function HighlightMarkdown({content}) {
     return (
-        <Markdown components={{code: CodeBlock}}>
-            {content}
-        </Markdown>
+        <div className={`${ask.messageDefault} ${ask.messageServer}`}>
+            <Markdown components={{code: CodeBlock}}>
+                {content}
+            </Markdown>
+        </div>
+
     )
 }

@@ -19,9 +19,13 @@ const chatMessageSlice = createSlice({
         updateChatMessage: (state, action) => {
             const index = state.length - 1;
             state[index].content = action.payload;
+        },
+        deleteByIndex(state, action){
+            const index = action.payload;
+            state.splice(index, 1);
         }
     }
 })
 
-export const {addChatMessage, updateChatMessage} = chatMessageSlice.actions;
+export const {addChatMessage, updateChatMessage,deleteByIndex} = chatMessageSlice.actions;
 export default chatMessageSlice.reducer;

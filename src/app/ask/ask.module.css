@@ -41,10 +41,11 @@
     margin: 20px 0;
 }
 
-.w100{
+.w100 {
     width: 100%;
 }
-.h100{
+
+.h100 {
     height: 100%;
 }
 
@@ -55,8 +56,32 @@
     flex-direction: column;
     justify-content: flex-end;
 }
+
 .rightContainer {
     width: calc(100% - 100px);
     border-left: none;
     padding: 10px;
+}
+
+.historyContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.historyRole {
+    width: 80px;
+}
+
+.historyMessage {
+    width: calc(100% - 80px);
+}
+
+.roleUser {
+    position: relative;
+}
+
+.userTools {
+    position: absolute;
+    left: 0;
+    top: -20px;
 }
