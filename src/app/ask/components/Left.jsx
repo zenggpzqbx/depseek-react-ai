@@ -27,7 +27,8 @@ export default function Left() {
     ]
     return (
         <div className={`${ask.leftContainer} ${ask.h100}`}>
-            <Modal open={isOpen} title={"消息记录"} closable={{'aria-label': 'Custom Close Button'}}
+            <Modal open={isOpen} title={"消息记录"} closable={{'aria-label': 'Custom Close Button'}} width={1200}
+                   footer={null}
                    onOk={handleOk}
                    onCancel={handleCancel}>
                 <div className={ask.historyContainer}>
