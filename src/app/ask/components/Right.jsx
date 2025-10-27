@@ -57,7 +57,8 @@ export default function Right() {
                 })}
             </div>
             <div className={ask.chatMessage}>
-                <TextArea placeholder="请输入你的问题" value={textArea} rows={5}
+                <TextArea placeholder="请输入你的问题"
+                          value={textArea} rows={5}
                           onChange={handleChangeEvent}
                           onPressEnter={handleEnterEvent}></TextArea>
             </div>

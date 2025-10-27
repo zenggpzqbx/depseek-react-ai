@@ -90,3 +90,7 @@
     color: var(--msg-text-color);
 }
 
+.textAreaBg{
+    background-color: var(--background-color);
+}
+
