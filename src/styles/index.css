@@ -1,0 +1,15 @@
+html.dark {
+    --background-color: #1e2022;
+    --font-color: #fff;
+    --border-color: #52616b;
+    --msg-background-color: #c9d6df;
+    --msg-text-color: #000;
+}
+
+html.light {
+    --background-color: #fff;
+    --font-color: #000;
+    --border-color: #b9d7ea;
+    --msg-background-color: #f0f8ff;
+    --msg-text-color: #000;
+}

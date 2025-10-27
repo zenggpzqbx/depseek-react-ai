@@ -37,7 +37,7 @@ export function RoleUser({content}) {
 
     return (
         <div className={`${ask.messageDefault}`}>
-            <div className={`${ask.messageClient}`}>{content}</div>
+            <div className={`${ask.messageClient} ${ask.msgTextColor}`}>{content}</div>
             <div className={`${ask.userTools}`}>
                 <RedoOutlined onClick={handleRedoEvent}/>
                 {!isCopy ?

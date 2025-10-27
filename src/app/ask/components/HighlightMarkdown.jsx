@@ -12,15 +12,8 @@ function CodeBlock({node, inline, className, children, ...props}) {
     if (inline) {
         return (
             <code
-                className="inline-code"
+                className={`${ask.fontColor}`}
                 {...props}
-                style={{
-                    background: '#f3f4f6',
-                    padding: '2px 6px',
-                    borderRadius: '4px',
-                    fontSize: '0.9em',
-                    color: '#e83e8c'
-                }}
             >
                 {children}
             </code>
@@ -36,7 +29,7 @@ function CodeBlock({node, inline, className, children, ...props}) {
 
 export default function HighlightMarkdown({content}) {
     return (
-        <div className={`${ask.messageDefault} ${ask.messageServer}`}>
+        <div className={`${ask.messageDefault} ${ask.messageServer} ${ask.msgTextColor}`}>
             <Markdown components={{code: CodeBlock}}>
                 {content}
             </Markdown>

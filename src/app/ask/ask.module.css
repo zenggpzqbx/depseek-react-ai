@@ -27,7 +27,7 @@
 }
 
 .messageClient {
-    background-color: blanchedalmond;
+    background-color: var(--msg-background-color);
     text-align: right;
     align-self: end;
     border-radius: 10px;
@@ -35,7 +35,7 @@
 }
 
 .messageServer {
-    background-color: aliceblue;
+    background-color: var(--msg-background-color);
     text-align: left;
     margin: 20px 0;
     border-radius: 10px;
@@ -56,8 +56,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: #f9fafb;
-    border-right: 1px solid rgba(0,0,0,.04);
+    background-color: var(--background-color);
+    border-right: 1px solid var(--border-color);
 }
 
 .rightContainer {
@@ -85,3 +85,8 @@
     flex-direction: row;
     justify-content: end;
 }
+
+.msgTextColor {
+    color: var(--msg-text-color);
+}
+

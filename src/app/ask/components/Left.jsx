@@ -3,13 +3,12 @@ import ask from "../ask.module.css"
 import {Modal} from "antd";
 import {useState} from "react";
 import {useRenderChatMsg} from "@/utils/useRenderChatMsg";
+import {useRouter} from "next/navigation";
 
 export default function Left() {
     const {renderMsg} = useRenderChatMsg()
     const [isOpen, setIsOpen] = useState(false);
-    const showModal = () => {
-        setIsOpen(true);
-    };
+    const router = useRouter();
 
     const handleOk = () => {
         setIsOpen(false);
@@ -22,8 +21,13 @@ export default function Left() {
         {
             src: "/svg/文档预览.svg", alt: "预览", label: "消息预览", width: 30, height: 30, onClick: () => {
                 setIsOpen(true);
-            }
+            },
         },
+        {
+            src: "/svg/设置.svg", alt: "设置", label: "设置", width: 30, height: 30, onClick: () => {
+                router.push("/ask/setting")
+            }
+        }
     ]
     return (
         <div className={`${ask.leftContainer} ${ask.h100}`}>
@@ -46,7 +50,7 @@ export default function Left() {
                 return (
                     <div key={index} className={`flex flex-col justify-center items-center`} onClick={img.onClick}>
                         <Image {...img} style={{textAlign: "center"}}></Image>
-                        <div>{img.label}</div>
+                        <div className={`${ask.fontColor}`}>{img.label}</div>
                     </div>
                 )
             })}
