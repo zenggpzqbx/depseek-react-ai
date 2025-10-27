@@ -6,4 +6,5 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 * 可以查询天气
 * 回答内容渲染到markdown文档中，并着色
 * 消息预览-预览所有消息记录
-* 悬浮输入的问题，弹出相关工具条（重做）
+* 悬浮输入的问题，弹出相关工具条（重做,复制当前内容）
+* 可以切换主题色
