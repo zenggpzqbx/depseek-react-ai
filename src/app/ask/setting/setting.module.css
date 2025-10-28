@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.settingItem{
+.settingItem {
     border: 1px solid var(--border-color);
     padding: 10px;
     border-radius: 15px;

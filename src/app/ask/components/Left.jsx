@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import ask from "../ask.module.css"
 import {Modal} from "antd";
