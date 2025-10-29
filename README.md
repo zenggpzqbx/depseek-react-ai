@@ -8,3 +8,4 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 * 消息预览-预览所有消息记录
 * 悬浮输入的问题，弹出相关工具条（重做,复制当前内容）
 * 可以切换主题色
+* 刷新页面后主题色不变（状态持久化）
