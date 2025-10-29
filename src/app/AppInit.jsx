@@ -1,8 +1,9 @@
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {setTheme} from "@/store/themeSlice";
+import {setTheme} from "@/store/slices/themeSlice";
 
 export default function AppInit() {
+    const theme = useSelector((state) => state.theme);
     const dispatch = useDispatch();
 
     function handleThemeChange(e) {
@@ -10,7 +11,7 @@ export default function AppInit() {
     }
 
     useEffect(() => {
-        dispatch(setTheme("light"));
+        dispatch(setTheme(theme));
         const media = window.matchMedia("(prefers-color-scheme: dark)")
         media.addEventListener('change', handleThemeChange)
 

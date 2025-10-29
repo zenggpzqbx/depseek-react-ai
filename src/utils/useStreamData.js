@@ -1,4 +1,4 @@
-import {addChatMessage, updateChatMessage} from "@/store/chatMessageSlice";
+import {addChatMessage, updateChatMessage} from "@/store/slices/chatMessageSlice";
 import RealInfoSet from "@/utils/realInfo/weather";
 import _ from "lodash";
 import KeyManager from "@/utils/KeyManager";

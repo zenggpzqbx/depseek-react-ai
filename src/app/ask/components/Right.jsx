@@ -4,7 +4,7 @@ import {useEffect, useMemo, useRef, useState} from "react";
 import HighlightMarkdown from "@/app/ask/components/HighlightMarkdown";
 import ask from "@/app/ask/ask.module.css";
 import {useDispatch, useSelector} from "react-redux";
-import {addChatMessage} from "@/store/chatMessageSlice";
+import {addChatMessage} from "@/store/slices/chatMessageSlice";
 import {useRenderChatMsg} from "@/utils/useRenderChatMsg";
 import {useStreamData} from "@/utils/useStreamData";
 import {RoleUser} from "@/app/ask/components/RoleUser";

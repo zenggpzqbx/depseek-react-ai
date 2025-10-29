@@ -3,8 +3,9 @@ import {Geist, Geist_Mono} from "next/font/google";
 import "@/styles/index.css";
 import "./globals.css";
 // import {AntdRegistry} from "@ant-design/nextjs-registry";
-import {Provider} from "react-redux";
-import {store} from "@/store";
+import {Provider, useDispatch} from "react-redux";
+import {PersistGate} from 'redux-persist/integration/react';
+import {store, persistor} from "@/store";
 import AppInit from "@/app/AppInit";
 
 const geistSans = Geist({
@@ -23,14 +24,17 @@ const geistMono = Geist_Mono({
 // };
 
 export default function RootLayout({children}) {
+
     return (
         <html lang="en">
         <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
         <Provider store={store}>
-            <AppInit></AppInit>
-            {children}
+            <PersistGate loading={null} persistor={persistor}>
+                <AppInit></AppInit>
+                {children}
+            </PersistGate>
         </Provider>
         </body>
         </html>

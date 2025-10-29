@@ -1,7 +1,7 @@
 import {CheckOutlined, CopyOutlined, RedoOutlined} from "@ant-design/icons";
 import {useDispatch, useSelector} from "react-redux";
 import {useStreamData} from "@/utils/useStreamData";
-import {deleteByIndex} from "@/store/chatMessageSlice";
+import {deleteByIndex} from "@/store/slices/chatMessageSlice";
 import ask from "../ask.module.css"
 import {useEffect, useRef, useState} from "react";
 import {useImmer} from "use-immer";

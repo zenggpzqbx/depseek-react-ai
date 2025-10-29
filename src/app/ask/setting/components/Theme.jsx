@@ -1,7 +1,7 @@
 import {Select} from "antd";
 import setting from "../setting.module.css"
 import {useDispatch, useSelector} from "react-redux";
-import {setTheme} from "@/store/themeSlice";
+import {setTheme} from "@/store/slices/themeSlice";
 
 export default function Theme() {
     const theme = useSelector(state => state.theme);
